@@ -300,7 +300,7 @@ function getStyleSize( value ) {
   return isValid && num;
 }
 
-//function noop() {}
+function noop() {}
 
 var logError = typeof console == 'undefined' ? noop :
   function( message ) {
