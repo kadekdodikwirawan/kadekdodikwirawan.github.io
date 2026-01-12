@@ -16,7 +16,10 @@ class Main {
             });
             setTimeout(() => {
                 iso.layout();
-            }, 1000);
+            }, 2000);
+            window.addEventListener('resize', () => {
+                iso.layout();
+            });
         }
     }
     initProfileModal() {

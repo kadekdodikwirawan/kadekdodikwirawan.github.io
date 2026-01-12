@@ -1,58 +1,90 @@
-# Kadek Dodik Wirawan — Portfolio (GitHub Pages)
 
-Live site: https://kadekdodikwirawan.github.io/
+# ⚡ Kadek Dodik Wirawan — Personal Portfolio
 
-## Overview
-Personal portfolio for Full Stack Architecture and Cloud Engineering work. Built with a modern, performance-focused stack and a clean, glass UI theme. Optimized for SEO and social sharing.
+**Live Demo:** [https://kadekdodikwirawan.github.io/](https://kadekdodikwirawan.github.io/)
 
-## Tech Stack
-- HTML + Tailwind CSS (CDN)
-- Vanilla JavaScript
-- Isotope (masonry/grid layout and reflow)
-- Custom styles in `assets/css/style.css`
-- SEO: meta tags + JSON-LD Schema
+## 📖 Overview
 
-## Project Structure
+This is the personal portfolio website for **Kadek Dodik Wirawan**, a Full Stack Developer and Cloud Engineer based in Bali. The site is designed to showcase professional experience, technical skills, and a portfolio of projects ranging from High-Performance WordPress sites to Cloud Architecture and Web3 DApps.
+
+Built with a **performance-first** approach, this static site leverages the utility-first power of **Tailwind CSS** (via CDN) and **Vanilla JavaScript** to deliver a lightning-fast, responsive, and visually stunning "Dark Glass" UI without the overhead of heavy frontend frameworks.
+
+## ✨ Key Features
+
+* **🎨 Glassmorphism UI:** A modern, dark-themed aesthetic with glass-panel effects and smooth gradients.
+* **📱 Fully Responsive:** Optimized for all devices, from mobile phones to large desktop screens.
+* **🚀 High Performance:** Zero-build step required. Uses Tailwind CDN and optimized assets for instant loading.
+* **🧱 Masonry Grid Layout:** Integrated `Isotope.js` for a dynamic, filterable project portfolio grid.
+* **🔍 SEO Optimized:** Includes Open Graph (OG) tags, Twitter Cards, and JSON-LD Schema for rich search results.
+* **🛠️ Tech Stack Showcase:** Dedicated sections for displaying skills (AWS, React, Python, etc.) with FontAwesome icons.
+
+## 🛠️ Built With
+
+* **[HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)** - Semantic structure.
+* **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework (CDN version).
+* **[Vanilla JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)** - Logic for modals, navigation, and interactions.
+* **[Isotope.js](https://isotope.metafizzy.co/)** - Filtering and sorting layout library.
+* **[FontAwesome](https://fontawesome.com/)** - Iconography.
+* **[Google Fonts](https://fonts.google.com/)** - Typography (Inter & Fira Code).
+
+## 📂 Project Structure
+
+```text
+kadekdodikwirawan.github.io
+├── index.html          # Main application file (Single Page)
+├── README.md           # Project documentation
+└── assets/
+    ├── css/
+    │   └── style.css   # Custom overrides & animations
+    ├── images/         # Project screenshots & assets
+    └── js/
+        ├── main.js     # UI logic & Isotope initialization
+        └── isotope...  # Vendor libraries
+
 ```
-index.html
-assets/
-	css/
-		style.css
-	images/
-	js/
-		isotope.pkgd.min.js
-		main.js
-```
 
-## Key Features
-- Responsive layout with dark glass aesthetic
-- Portfolio grid with Isotope masonry (`.grid-projects` / `.grid-item`)
-- Mobile navigation and smooth section navigation
-- Rich metadata (Open Graph, Twitter cards) + Person schema
+## 🚀 Getting Started
 
-## Getting Started (Local Preview)
-Quick ways to view the site locally:
+Since this is a static site, you don't need `npm` or a build process to run it.
 
-1) Open directly: double-click `index.html` in your file explorer.
+### Option 1: VS Code Live Server (Recommended)
 
-2) Serve locally with Python (Windows/macOS/Linux):
+1. Open the project folder in **VS Code**.
+2. Install the **Live Server** extension.
+3. Right-click `index.html` and select **"Open with Live Server"**.
+
+### Option 2: Python Simple HTTP Server
+
+If you have Python installed, you can serve the site globally on your machine:
+
 ```bash
+# Run inside the project directory
 python -m http.server 5500
-# then visit: http://localhost:5500/
+
 ```
 
-3) VS Code: use the “Live Server” extension on `index.html`.
+Then visit: `http://localhost:5500`
 
-## Editing Content
-- Hero, About, Services, and Contact sections live in [index.html](index.html).
-- Portfolio items are cards inside the `.grid-projects` container in [index.html](index.html). Each card uses the `.grid-item` class.
-- Isotope initialization is in [assets/js/main.js](assets/js/main.js). Adjust layout options or reflow timing there.
-- Styles are in [assets/css/style.css](assets/css/style.css). Tune spacing, colors, borders, and effects.
-- Update SEO meta and social image in [index.html](index.html) (`meta` tags, JSON-LD block).
+### Option 3: Direct File Open
 
-## Deployment
-This is a user/organization GitHub Pages root repository. Pushing changes to the default branch updates https://kadekdodikwirawan.github.io/ automatically.
+Simply double-click `index.html` to open it in your browser (note: some features like history API or strict CORS policies might behave differently than a real server).
 
-## Credits
-- Tailwind CSS (CDN)
-- Isotope by Metafizzy
+## 🌍 Deployment
+
+This site is configured for **GitHub Pages**.
+
+1. Push your changes to the `main` or `master` branch.
+2. Go to **Settings > Pages** in your GitHub repository.
+3. Ensure the source is set to your default branch.
+4. Your site will be live at `https://<username>.github.io/`.
+
+## 📬 Contact
+
+* **Author:** Kadek Dodik Wirawan
+* **Email:** kadekdodikwirawan@gmail.com
+* **LinkedIn:** [Kadek Dodik Wirawan](https://www.linkedin.com/in/kadek-dodik-wirawan/)
+* **GitHub:** [kadekdodikwirawan](https://github.com/kadekdodikwirawan)
+
+---
+
+*© 2026 Kadek Dodik Wirawan. All Rights Reserved.*
