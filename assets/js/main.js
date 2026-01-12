@@ -2,6 +2,37 @@ class Main {
     constructor() {
         this.initIsotope();
         this.initProfileModal();
+        this.initMobileMenu();
+        this.initSmoothScroll();
+        this.initMarquee();
+    }
+    initMarquee() {
+        const container = document.querySelector('.animate-marquee');
+        if (!container) return;
+
+        container.style.display = 'flex';
+        container.style.width = 'max-content';
+
+        const items = Array.from(container.children);
+        items.forEach(item => {
+            const clone = item.cloneNode(true);
+            container.appendChild(clone);
+        });
+
+        const contentWidth = container.scrollWidth / 2;
+
+        let position = 0;
+        const speed = 1.5;
+
+        const animate = () => {
+            position -= speed;
+            if (position <= -contentWidth) {
+                position = 0;
+            }
+            container.style.transform = `translateX(${position}px)`;
+            requestAnimationFrame(animate);
+        };
+        requestAnimationFrame(animate);
     }
     initIsotope() {
         const grid = document.querySelector('.grid-projects');
@@ -21,6 +52,27 @@ class Main {
                 iso.layout();
             });
         }
+    }
+    initMobileMenu() {
+        const menuContainer = document.getElementById('mobile-menu');
+        const mobileMenuItems = menuContainer ? menuContainer.querySelectorAll('a') : [];
+        if (!menuContainer || !mobileMenuItems.length) return;
+        mobileMenuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                menuContainer.classList.add('hidden');
+            });
+        });
+    }
+    initSmoothScroll() {
+        const lenis = new Lenis({
+            duration: 2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        });
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
     }
     initProfileModal() {
         const avatar = document.querySelector('#profile-avatar');
