@@ -5,6 +5,23 @@ class Main {
         this.initMobileMenu();
         this.initSmoothScroll();
         this.initMarquee();
+        this.initGsapTextAnimation();
+    }
+    initGsapTextAnimation() {
+        gsap.registerPlugin(SplitText);
+        const textElement = document.querySelector('.text-animation');
+        
+        if (textElement) {
+            if (typeof SplitText !== 'undefined' && SplitText.create) {
+                let split = SplitText.create(textElement, { type: "chars" });
+                gsap.set(split.chars, { opacity: 0 });
+                gsap.to(split.chars, {
+                    opacity: 1,
+                    duration: 0,
+                    stagger: 0.05,
+                });
+            }
+        }
     }
     initMarquee() {
         const container = document.querySelector('.animate-marquee');
